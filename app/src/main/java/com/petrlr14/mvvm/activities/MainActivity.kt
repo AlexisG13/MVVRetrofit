@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+
     lateinit var adapter:ReposAdapter
     lateinit var viewModel:GitHubRepoViewModel
 
@@ -32,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             adapter.updateList(it)
         })
         btn_repo.setOnClickListener {
-            //viewModel.retrieveRepo(et_repo.text.toString())
+            viewModel.retrieveRepo(et_repo.text.toString())
         }
     }
 
